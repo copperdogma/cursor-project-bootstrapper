@@ -1,115 +1,131 @@
 # Cursor Project Bootstrapper
 
-Welcome to the **Cursor Project Bootstrapper**! This AI-powered framework helps you set up new projects in Cursor quickly and efficiently. Whether you're tackling a coding project, research, planning, or documentation, this tool collaborates with you to establish a solid foundation, streamlining the setup process so you can focus on building.
+Welcome to the **Cursor Project Bootstrapper**! This AI-powered framework is designed to streamline the setup of new projects within Cursor, an innovative development environment. Whether you're launching a software development project or exploring other endeavors, this tool collaborates with you to establish a solid foundation, leveraging AI to save time and enhance organization.
+
+You can [download the Cursor IDE here](https://www.cursor.com/).
+
+The framework currently supports two project types: **programming** and **research**. The **programming** type is fully equipped for software development, while **research** serves as an example to demonstrate the framework's adaptability. You can customize or extend it for other project types as needed.
 
 ---
 
 ## Key Features
 
-- **Structured Setup**: A clear, step-by-step process to kickstart your project.
-- **Versatile Support**: Works for both technical (e.g., software development) and non-technical (e.g., planning, research) projects.
-- **AI Assistance**: Guides requirements gathering, document creation, and story management.
+- **Structured Setup**: A guided, step-by-step process tailored to your project type.
+- **AI Assistance**: Automates requirements gathering, document creation, and task management.
+- **Versatile Support**: Optimized for programming projects, with flexibility for other types like research.
 - **Comprehensive Documentation**: Generates organized files in `/docs` to keep your project on track.
-- **Collaborative Workflow**: Combines AI automation with user input at key decision points.
+- **Collaborative Workflow**: Balances AI automation with your input at critical stages.
 
 ---
 
 ## Project Structure
 
-Here's what you'll find in your project folder:
+Your project begins with a minimal structure, containing only the `/docs/requirements.md` file. As the AI gathers requirements and you confirm a project type (e.g., **programming** or **research**), it copies a tailored set of files into `/docs` based on that type. The framework then guides you through the remaining setup specific to your project.
 
-- **`.cursor/rules`**:  
-  - `project-management.mdc`: Defines the AI's project setup and management behavior.  
-  - `scratchpad.mdc`: Governs how the AI uses the scratchpad for memory and logging.  
-- **`bootstrapping/templates`**: Templates for key documents (e.g., requirements, design, stories).  
-- **`README.md`**: You're reading it! Your guide to the framework.  
-- **`scratchpad.md`**: The AI's working memory, tracking progress and flagging issues.  
-- **`/docs`**: Post-setup, this folder holds:  
-  - `/docs/requirements.md`: Project goals and needs.  
-  - `/docs/design.md`: High-level design or plan.  
-  - `/docs/architecture.md`: Technical structure (if applicable).  
-  - `/docs/stories.md`: Story tracker.  
-  - `/docs/stories/`: Individual story files (e.g., `/docs/stories/story-001-implement-task-creation.md`).  
+Here’s the full structure after setup for a **programming** project (the most common use case):
+
+- **`.cursor/rules`**: Defines AI behavior.
+  - `project-management.mdc`: Governs project setup and management.
+  - `scratchpad.mdc`: Manages the AI's scratchpad usage.
+- **`bootstrapping`**: Contains project-type configurations and scripts.
+- **`README.md`**: This guide to using the framework.
+- **`scratchpad.md`**: The AI's working memory, logging progress and issues.
+- **`/docs`**: Starts with only `requirements.md`. For a **programming** project, the AI adds:
+  - `requirements.md`: Project goals and needs.
+  - `design.md`: High-level design or plan.
+  - `architecture.md`: Technical structure.
+  - `stories.md`: Task tracker.
+  - `/stories/`: Individual task files (e.g., `story-001-implement-login.md`).
+
+**Note**: The files listed above are specific to **programming** projects. Other project types, like **research**, will receive a different set of files based on their own manifest, adapting to their unique needs. This ensures flexibility while keeping the setup relevant to your project.
 
 ---
 
 ## Workflow Overview
 
-The AI follows a structured process to bootstrap your project:
+The AI follows a systematic process to bootstrap your project:
 
-1. **Introduction**: Engages you to understand the project type (technical or non-technical).  
-2. **Requirements Gathering**: Collects details from you and drafts `/docs/requirements.md`.  
-3. **Design Creation**: Builds `/docs/design.md` based on the requirements.  
-4. **Architecture Setup**: Crafts `/docs/architecture.md` (skipped for non-technical projects).  
-5. **First Story**: Writes the initial story in `/docs/stories` and adds it to `/docs/stories.md`.  
-6. **Build Phase**: Suggests next steps, resets the scratchpad, and shifts to story management.  
+1. **Introduction**: Engages with you to understand your project and identify the appropriate project type (e.g., **programming** or **research**).
+2. **Requirements Gathering**: Collects details from you and drafts `/docs/requirements.md`.
+3. **Project Type Selection**: Based on the requirements, the AI suggests a project type and, upon your confirmation, copies the relevant files for that type into `/docs`.
+4. **Design Creation**: Builds `/docs/design.md` aligned with the requirements (for **programming** projects).
+5. **Architecture Setup**: Creates `/docs/architecture.md` (for **programming** projects).
+6. **First Story**: Writes an initial task in `/docs/stories` and updates `/docs/stories.md` (for **programming** projects).
+7. **Build Phase**: Suggests next steps, resets `scratchpad.md`, and shifts to task management.
 
-Once in the build phase, the AI:  
-- Creates new stories in `/docs/stories`.  
-- Updates `/docs/stories.md` with story statuses.  
-- Logs progress or issues in `scratchpad.md`.  
-- Requests your input when needed.  
+In the **Build Phase**, the AI:
+- Generates new tasks in `/docs/stories` (for **programming** projects).
+- Updates `/docs/stories.md` with task statuses.
+- Logs progress or blockers in `scratchpad.md`.
+- Seeks your guidance as needed.
+
+**Note**: For non-programming projects like **research**, the workflow adapts accordingly, focusing on relevant tasks and documents.
 
 ---
 
 ## Your Role
 
-You're an active partner in this process! Here's how you'll collaborate with the AI:  
+You’re a key collaborator in this process:
 
-- **Provide Input**: Share project details during requirements gathering.  
-- **Review Documents**: Approve or tweak `/docs/requirements.md`, `/docs/design.md`, and others.  
-- **Confirm Stories**: Validate the first story and ongoing tasks in `/docs/stories`.  
-- **Resolve Issues**: Address blockers the AI logs in `scratchpad.md`.  
+- **Provide Input**: Share project details to shape requirements.
+- **Review Documents**: Approve or refine files in `/docs`.
+- **Confirm Tasks**: Validate tasks in `/docs/stories` (for **programming** projects).
+- **Work**: Do as much or as little of the project work as you like, using Cursor as your co-creator.
 
-The AI automates the heavy lifting—documentation, file setup, and story tracking—but you steer the project's direction.
+The AI automates setup and documentation, but your vision drives the project forward.
 
 ---
 
 ## Getting Started
 
-Ready to bootstrap your project? Follow these steps:  
+To launch your project with the Cursor Project Bootstrapper:
 
-1. **Create a New Cursor Project**: Start fresh in Cursor.  
-2. **Add the Framework Files**: Copy these into your project root:  
-   - `.cursor/rules/project-management.mdc`  
-   - `.cursor/rules/scratchpad.mdc`  
-   - `bootstrapping/templates/*`  
-   - `README.md`  
-   - `scratchpad.md`  
-3. **Open Composer**: In Cursor, navigate to the Composer tab.  
-4. **Select Claude Sonnet 3.5**: Choose this model for optimal performance.  
-5. **Enable Agent Mode**: Switch Composer to agent mode.  
-6. **Start Chatting**: Say "hi" or describe your project (e.g., "I want to build a task manager app"). The AI will take it from there, creating all documents in `/docs`!  
+1. **Create a New Folder**: Start with an empty folder for your project.
+2. **Copy Framework Files**: From this repository, copy the following into your project root:
+   - `.cursor` folder (contains `rules`)
+   - `bootstrapping` folder
+   - `docs` folder (initially contains only `requirements.md`)
+   - `scratchpad.md`
+3. **Open Cursor**: Load your project folder in Cursor.
+4. **Access Composer**: Go to the Composer tab.
+5. **Select Claude Sonnet 3.7 Thinking**: Choose this model for best results.
+6. **Enable Agent Mode**: Activate agent mode in Composer.
+7. **Start the Conversation**: Describe your project (e.g., "I want to build a task manager app"). The AI will initiate setup, creating all necessary files in `/docs` based on the selected project type.
 
 ---
 
 ## Best Practices
 
-Maximize your experience with these tips:  
+Enhance your experience with these tips:
 
-- **Be Detailed**: Provide clear, specific input during requirements gathering for better results.  
-- **Iterate**: Review documents in `/docs` and request edits as needed—nothing's set in stone.  
-- **Track Changes**: Use version control (e.g., Git) to manage your project's evolution.  
-- **Monitor Scratchpad**: If the AI seems off track, peek at `scratchpad.md` and clarify your intent.  
+- **Be Specific**: Offer detailed input during requirements gathering for precise outcomes.
+- **Iterate**: Review and adjust documents in `/docs`—they’re designed to evolve.
+- **Use Version Control**: Track changes with Git or similar tools.
+- **Check Scratchpad**: If the AI veers off course, consult `scratchpad.md`, encourage it to do the same, and modify `scratchpad.md` or just tell the AI to do so and what you want.
 
 ---
 
 ## Additional Notes
 
-- **Non-Technical Projects**: For planning or research, the AI skips technical steps like `/docs/architecture.md` and adapts the workflow.  
-- **Troubleshooting**: Check `scratchpad.md` if something goes awry—the AI logs issues there and asks for your help.  
-- **Post-Bootstrapping**: Once setup is done, you can archive or delete the `/bootstrapping` folder.  
+- **Non-Programming Projects**: For types like research, the framework skips technical steps (e.g., architecture setup) and adapts accordingly.
+- **Troubleshooting**: If issues emerge, check `scratchpad.md` for logged problems and respond to AI prompts.
+- **Post-Setup**: After bootstrapping, you may archive or remove the `bootstrapping` folder.
 
 ---
 
 ## Inspiration
 
-This project draws inspiration from two excellent frameworks:  
-- **[cursor-auto-rules-agile-workflow](https://github.com/bmadcode/cursor-auto-rules-agile-workflow)**: Provided the original spark with its agile workflow and rule-based structure.  
-- **[NEW-PROJECT-RULES-ULTRA-CONTEXT-FOR-AI-MEMORIES-LESSONS-SCRATCHPAD-WITH-PLAN-AND-ACT-MODES](https://github.com/T1nker-1220/NEW-PROJECT-RULES-ULTRA-CONTEXT-FOR-AI-MEMORIES-LESSONS-SCRATCHPAD-WITH-PLAN-AND-ACT-MODES)**: Influenced the `scratchpad.md` design, offering ideas for AI memory and task tracking.  
+This framework was inspired by:
 
-Thanks to these projects for their innovative approaches, which helped shape this framework!
+- **[cursor-auto-rules-agile-workflow](https://github.com/bmadcode/cursor-auto-rules-agile-workflow)**: For its agile workflow and rule-based structure.
+- **[NEW-PROJECT-RULES-ULTRA-CONTEXT-FOR-AI-MEMORIES-LESSONS-SCRATCHPAD-WITH-PLAN-AND-ACT-MODES](https://github.com/T1nker-1220/NEW-PROJECT-RULES-ULTRA-CONTEXT-FOR-AI-MEMORIES-LESSONS-SCRATCHPAD-WITH-PLAN-AND-ACT-MODES)**: For its creative use of a scratchpad for AI memory and task tracking.
+
+Gratitude to these projects for their foundational contributions!
 
 ---
 
-This framework is here to save you time, keep your project organized, and harness AI to launch your ideas—coding or otherwise. Dive in and happy bootstrapping!
+Dive in, harness the power of AI, and bootstrap your next project with ease. Happy creating!
+
+## License
+
+MIT
