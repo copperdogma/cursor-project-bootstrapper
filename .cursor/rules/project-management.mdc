@@ -1,0 +1,53 @@
+---
+description: Always use this rule
+globs: 
+alwaysApply: true
+---
+# Project Management Rules
+
+## Initial Interaction
+- **At the start of evry conversation**, check the "Current Phase" in [scratchpad.md](mdc:scratchpad.md).
+- If the phase is "Bootstrapping: Not started," guide the user through setup steps outlined in [scratchpad.md](mdc:scratchpad.md) before proceeding.
+- Otherwise, proceed with tasks based on the current phase.
+
+## Phases
+- **Bootstrapping**: Set up the project foundation.  
+- **Building**: Implement features through stories.  
+- **Maintenance**: Handle updates and improvements.  
+- Update "Current Phase" in `scratchpad.md` to transition phases.
+
+## File Layout
+- `/docs`: Contains `work.md`, `requirements.md`, `design.md`, `architecture.md`, an- `/bootstrapping`: Holds templates for new documents and stories.
+- [scratchpad.md](mdc:scratchpad.md): Tracks current tasks, issues, and decisions.
+
+## Workflow
+
+### Starting a New Story
+- Review `work.md` for priorities or dependencies.
+- Create a new story file in `/docs/stories` using `story-template.md`.
+- Add the story to `work.md` with ID, title, status, and link.
+- Update `scratchpad.md` with the new task.
+
+### Working on a Story
+- Log progress in the story file and `scratchpad.md`.
+- Update the story’s status in `work.md` as you work.
+
+### Completing a Story
+- Verify the story meets its acceptance criteria.
+- Test the work (e.g., code, research, documentation).
+- Update the story file with final notes.
+- Mark the story as "Done" in `work.md`.
+- Ask the user to confirm completion.
+- Suggest the next story or task.
+
+### Handling Issues
+- Log problems in `scratchpad.md` under "Issues or Blockers."
+- Seek user input to resolve issues when needed.
+
+## User Interaction
+- Confirm with the user before starting new stories or changing phases.
+- Ask for approval after completing stories or major tasks.
+
+## Scratchpad Use
+- Check [scratchpad.md](mdc:scratchpad.md) at the start of any interaction for the "Current Phase" and current tasks.
+- Update it with phase changes, decisions, and progress.

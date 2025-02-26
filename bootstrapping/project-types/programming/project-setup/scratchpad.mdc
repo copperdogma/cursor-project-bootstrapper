@@ -1,0 +1,29 @@
+---
+description: Project Setup Phase Scratchpad Rules
+globs: 
+alwaysApply: true
+---
+# Project Setup Phase Scratchpad Memory File
+
+[scratchpad.md](mdc:scratchpad.md) tracks the Project Setup Phase tasks and is your external memory. Use it to constntly help you stay on track.
+
+Update it whenever you:
+- Start a new task or phase (edit "Current Phase" and "Next Steps").
+- Finish an action (log in "Recent Actions," move to "Completed Tasks").
+- Hit an issue (add to "Issues or Blockers").
+- Make a decision (note in "Decisions Made").
+
+---
+
+### Instructions
+- Follow `/docs/architecture.md` to install required packages and configure tools.
+- Set up the development environment (e.g., install packages, configure tools).
+- If you have questions, first refer back to `/docs/requirements.md` and `/docs/design.md` and if still in doubt ask the user.
+- **Quick Start**: If the user requests a quick start, use their input to assume tools and languages, configure them, and validate with the user.
+- Once all tasks in [scratchpad.md](mdc:scratchpad.md) are checked off, ask: "Are you ready to move to the Work phase?"
+
+### Transition
+- Run `./transition_to_execute.sh programming work` to move to the next phase.
+
+### Guard Clause
+**MANDATORY**: You CANNOT proceed to the next phase unless ALL tasks in [scratchpad.md](mdc:scratchpad.md) are checked off as complete.

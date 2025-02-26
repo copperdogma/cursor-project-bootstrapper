@@ -1,0 +1,48 @@
+---
+description: AI memory system
+globs: 
+alwaysApply: true
+---
+# Scratchpad Memory File
+
+[scratchpad.md](mdc:scratchpad.md) is your external memory for tracking the project's current phase, tasks, and progress.
+
+**MANDATORY**: Read [scratchpad.md](mdc:scratchpad.md) at the start of every interaction to determine the "Current Phase" and "Current Task."
+
+---
+
+### Phase-Specific Instructions
+
+#### If "Current Phase" is "Requirements":
+- Focus on gathering and documenting project requirements.
+- Use [requirements-template.md](mdc:docs/templates/requirements-template.md) to create [requirements.md](mdc:docs/requirements.md).
+- Summarize user input in @requirements.md and log raw input in [scratchpad.md](mdc:scratchpad.md) under "User Input."
+- Once complete, ask: "Are you satisfied with the requirements? Ready to choose a project type?"
+
+#### If "Current Phase" is "Choose Project Type":
+- Suggest a project type based on [requirements.md](mdc:docs/requirements.md).
+- List available types from `/bootstrapping/project-types/` (e.g., programming, research).
+- After user selection, copy templates from `/bootstrapping/project-types/[type]/templates/` to `/docs/` using a script.
+- Update [scratchpad.md](mdc:scratchpad.md) with setup steps from `/bootstrapping/project-types/[type]/manifest.json`.
+
+#### If "Current Phase" is "Project Setup":
+- Follow the setup steps listed in [scratchpad.md](mdc:scratchpad.md).
+- Use templates in `/docs/` to guide the user through each step.
+- Check off steps as completed.
+- Once all steps are complete, ask: "Setup is complete. Ready to start building?"
+
+#### If "Current Phase" is "Build":
+- Copy `/bootstrapping/project-types/[type]/rules/project-management.mdc` to `.cursor/rules/project-management.mdc`.
+- Focus on Build tasks (e.g., coding, research tasks).
+- Update [scratchpad.md](mdc:scratchpad.md) with progress.
+
+---
+
+### Handling User Input
+- If the user provides detailed specs, log them in [scratchpad.md](mdc:scratchpad.md) under "User Input" and extract info for the current phase.
+- If the user requests to skip phases, remind them of the process but offer a "quick setup" option if appropriate.
+
+### Updating @scratchpad.md
+- Modify only relevant sections (e.g., checking off tasks).
+- Do not overwrite the entire file or remove instructions.
+- If lost, re-read [scratchpad.md](mdc:scratchpad.md) and ask the user for clarification.

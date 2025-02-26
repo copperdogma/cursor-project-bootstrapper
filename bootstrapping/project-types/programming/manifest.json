@@ -1,0 +1,36 @@
+{
+  "name": "Programming",
+  "phases": [
+    {
+      "name": "planning",
+      "files": [
+        {"source": "planning/scratchpad.mdc", "destination": ".cursor/rules/scratchpad.mdc"},
+        {"source": "planning/scratchpad.md", "destination": "scratchpad.md"},
+        {"source": "planning/design-template.md", "destination": "docs/templates/design-template.md"},
+        {"source": "planning/architecture-template.md", "destination": "docs/templates/architecture-template.md"},
+        {"source": "planning/story-template.md", "destination": "docs/templates/story-template.md"},
+        {"source": "planning/work-template.md", "destination": "docs/templates/work-template.md"},
+        {"source": "planning/design.md", "destination": "docs/design.md"},
+        {"source": "planning/architecture.md", "destination": "docs/architecture.md"},
+        {"source": "planning/stories.md", "destination": "docs/stories.md"},
+        {"source": "planning/stories-template.md", "destination": "docs/templates/stories-template.md"}
+      ]
+    },
+    {
+      "name": "project-setup",
+      "files": [
+        {"source": "project-setup/scratchpad.mdc", "destination": ".cursor/rules/scratchpad.mdc"},
+        {"source": "project-setup/scratchpad.md", "destination": "scratchpad.md"}
+      ]
+    },
+    {
+      "name": "work",
+      "files": [
+        {"source": "work/scratchpad.mdc", "destination": ".cursor/rules/scratchpad.mdc"},
+        {"source": "work/scratchpad.md", "destination": "scratchpad.md"},
+        {"source": "work/project-management.mdc", "destination": ".cursor/rules/project-management.mdc"},
+        {"source": "work/story-template.md", "destination": "docs/templates/story-template.md"}
+      ]
+    }
+  ]
+}

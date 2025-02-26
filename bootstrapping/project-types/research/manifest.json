@@ -1,0 +1,42 @@
+{
+  "name": "Research",
+  "description": "For research and analysis projects",
+  "templates": [
+    {"source": "literature-review.md", "destination": "literature-review.md"},
+    {"source": "methodology.md", "destination": "methodology.md"}
+  ],
+  "setup_steps": [
+    {
+      "name": "Define research objectives",
+      "description": "Specify the goals and scope of the research."
+    },
+    {
+      "name": "Plan literature review",
+      "description": "Outline the literature review process.",
+      "template": "literature-review.md"
+    },
+    {
+      "name": "Define methodology",
+      "description": "Establish the research methodology.",
+      "template": "methodology.md"
+    }
+  ],
+  "transition_to_execute": {
+    "scratchpad_mdc": {
+      "source": "rules/scratchpad.mdc",
+      "destination": ".cursor/rules/scratchpad.mdc"
+    },
+    "scratchpad_template": {
+      "source": "templates/scratchpad-execute.md",
+      "destination": "scratchpad.md"
+    },
+    "additional_files": [
+      {"source": "templates/tasks.md", "destination": "docs/tasks.md"}
+    ]
+  },
+  "task_management": {
+    "method": "tasks",
+    "tracker": "docs/tasks.md",
+    "template": "task-template.md"
+  }
+}

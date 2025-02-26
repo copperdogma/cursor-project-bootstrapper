@@ -1,0 +1,16 @@
+---
+description: Research Project Management Rules
+globs: 
+alwaysApply: true
+---
+# Research Project Management
+
+## Build Phase Workflow
+- Use tasks to manage research activities.
+- Track tasks in `/docs/tasks.md`.
+- Follow `/docs/literature-review.md` and `/docs/methodology.md`.
+
+## Task Management
+- Create new tasks in `/docs/tasks/` using a simple task template.
+- Update `/docs/tasks.md` with task statuses.
+- Confirm task completion with the user.

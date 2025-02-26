@@ -1,0 +1,28 @@
+---
+description: Programming Project Management Rules
+globs: 
+alwaysApply: true
+---
+# Programming Project Management
+
+## Build Phase Workflow
+- Use stories to manage development tasks.
+- Track stories in `/docs/work.md`.
+- Implement code following `/docs/architecture.md`, `/docs/design.md`, and [requirements.md](mdc:docs/requirements.md).
+
+## Story Management
+- Use `/docs/templates/stories-template.md` to create `/docs/stories.md` if it doesn't exist.
+- Use `/docs/templates/story-template.md` to create new stories in `/docs/stories/`.
+- Update `/docs/work.md` with story statuses.
+- Confirm story completion with the user.
+
+## Environment Management
+- Install packages and configure tools as needed.
+- Log changes in [scratchpad.md](mdc:scratchpad.md).
+
+## New Requirements
+If the user has new requirements or wants to re-think past decisions, read the following and update them accordingly:
+- `/docs/requirements.md` with formatting guidelines in `/docs/templates/requirements-template.md` 
+- `/docs/design.md` with formatting guidelines in `/docs/templates/design-template.md`
+- `/docs/architecture.md` with formatting guidelines in `/docs/templates/design-architecture.md` 
+- `/docs/stories.md` with formatting guidelines in `/docs/templates/design-stories.md`

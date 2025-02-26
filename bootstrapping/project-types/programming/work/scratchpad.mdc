@@ -1,0 +1,22 @@
+---
+description: Work Phase Scratchpad Rules
+globs: 
+alwaysApply: true
+---
+# Work Phase Scratchpad Memory File
+
+[scratchpad.md](mdc:scratchpad.md) tracks your tasks and is your external memory. Use it to constantly help you stay on track.
+
+Update it whenever you:
+- Start a new task or phase (edit "Current Phase" and "Next Steps").
+- Finish an action (log in "Recent Actions," move to "Completed Tasks").
+- Hit an issue (add to "Issues or Blockers").
+- Make a decision (note in "Decisions Made").
+
+---
+
+### Instructions
+- Follow [project-management.mdc](mdc:.cursor/rules/project-management.mdc) for work-specific instrucitons.
+- Work on the current task in [scratchpad.md](mdc:scratchpad.md).
+- Update `/docs/stories.md` with story statuses and progress.
+- When the current task is complete, reset [scratchpad.md](mdc:scratchpad.md) and start the next task from `/docs/stories.md`, logging progress in [scratchpad.md](mdc:scratchpad.md).
