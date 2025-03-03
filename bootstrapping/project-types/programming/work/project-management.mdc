@@ -1,28 +1,89 @@
 ---
-description: Programming Project Management Rules
+description: Project layout, workflow, story creation/completion
 globs: 
 alwaysApply: true
 ---
 # Programming Project Management
 
-## Build Phase Workflow
-- Use stories to manage development tasks.
-- Track stories in `/docs/work.md`.
-- Implement code following `/docs/architecture.md`, `/docs/design.md`, and [requirements.md](mdc:docs/requirements.md).
+## Overview
+This file provides guidance for managing projects starting from the Building phase, after the project type is selected, and continuing into the Maintenance phase.
 
-## Story Management
-- Use `/docs/templates/stories-template.md` to create `/docs/stories.md` if it doesn't exist.
-- Use `/docs/templates/story-template.md` to create new stories in `/docs/stories/`.
-- Update `/docs/work.md` with story statuses.
-- Confirm story completion with the user.
+This document is used to guide project planning, management, and execution
+[scratchpad.md](mdc:scratchpad.md) is used to track progress on the current task.
+
+---
+
+## Phases
+- **Building**: Implement features and functionality through stories.
+- **Maintenance**: Manage updates, bug fixes, and improvements.
+- Update "Current Phase" in [scratchpad.md](mdc:scratchpad.md) when transitioning between phases.
+---
+
+## File Layout
+- `/docs`:  
+  - [requirements.md](mdc:docs/requirements.md): Defines project requirements. Formatting guidelines in `/docs/templates/requirements-template.md` 
+  - `design.md`: Outlines design details. Formatting guidelines in `/docs/templates/design-template.md`
+  - `architecture.md`: Specifies architectural guidelines. Formatting guidelines in `/docs/templates/design-architecture.md` 
+  - `stories.md`: Lists all stories with IDs, titles, statuses, and links. Formatting guidelines in `/docs/templates/design-stories.md`
+  - `/docs/stories/`: Contains individual story files.  
+- `/docs/templates/`:  
+  - `story-template.md`: Template for new story files.  
+  - `stories-template.md`: Template for maintaining `/docs/stories.md`.  
+- [scratchpad.md](mdc:bootstrapping/project-types/programming/work/scratchpad.md): Tracks tasks, progress, decisions, and issues.
+
+---
+
+## Workflow
+
+### Building Phase
+- **Story Management**:  
+  - Create new stories in `/docs/stories/` using `/docs/templates/story-template.md`.  
+  - Add each story to `/docs/stories.md` with a unique ID, title, status, and link.  
+  - Update statuses in `/docs/stories.md` as work progresses (e.g., "In Progress," "Done").  
+- **Implementation**:  
+  - Write code following `/docs/architecture.md`, `/docs/design.md`, and `@requirements.md`.  
+- **Progress Tracking**:  
+  - Log updates in `@scratchpad.md` under "Progress."  
+  - Reflect status changes in `/docs/stories.md`.  
+- **Completion**:  
+  - Test the implementation (e.g., run code, verify functionality).  
+  - Update the story file with final notes.  
+  - Mark the story as "Done" in `/docs/stories.md`.  
+  - Confirm completion with the user and suggest the next story or phase transition.
+
+### Maintenance Phase
+- Create new stories for updates or fixes using `/docs/templates/story-template.md`.  
+- Follow the Building phase workflow to manage and complete maintenance tasks.
+
+---
 
 ## Environment Management
-- Install packages and configure tools as needed.
-- Log changes in [scratchpad.md](mdc:scratchpad.md).
+- Install necessary packages or tools during Building or Maintenance.  
+- Make a permanent record in `/docs/architecture.md`
+- Document changes in `@scratchpad.md` under "Decisions Made" or "Progress."
 
-## New Requirements
-If the user has new requirements or wants to re-think past decisions, read the following and update them accordingly:
-- `/docs/requirements.md` with formatting guidelines in `/docs/templates/requirements-template.md` 
-- `/docs/design.md` with formatting guidelines in `/docs/templates/design-template.md`
-- `/docs/architecture.md` with formatting guidelines in `/docs/templates/design-architecture.md` 
-- `/docs/stories.md` with formatting guidelines in `/docs/templates/design-stories.md`
+---
+
+## Handling Changes
+- For new requirements or updates:  
+  - Revise `/docs/requirements.md`, `/docs/design.md`, and `/docs/architecture.md` as needed.  
+  - Add new stories to `/docs/stories/` and `/docs/stories.md`.  
+  - Log decisions in `@scratchpad.md` under "Decisions Made."
+
+---
+
+## User Interaction
+- Confirm story starts, completions, or phase changes with the user.  
+- Log user feedback or decisions in `@scratchpad.md`.
+
+---
+
+## Scratchpad Use
+- Start each interaction by checking `@scratchpad.md` for:  
+  - "Current Phase."  
+  - Active tasks or stories.  
+  - Issues or blockers.  
+- Update it with:  
+  - Progress on stories.  
+  - Phase transitions.  
+  - Decisions or issues.

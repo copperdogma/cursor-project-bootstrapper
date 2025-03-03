@@ -3,46 +3,71 @@ description: AI memory system
 globs: 
 alwaysApply: true
 ---
-# Scratchpad Memory File
+# Requirements Phase Scratchpad
 
-[scratchpad.md](mdc:scratchpad.md) is your external memory for tracking the project's current phase, tasks, and progress.
+@scratchpad.md already exists and is your external memory for your current task. Use it to constantly help you stay on track.
 
-**MANDATORY**: Read [scratchpad.md](mdc:scratchpad.md) at the start of every interaction to determine the "Current Phase" and "Current Task."
-
----
-
-### Phase-Specific Instructions
-
-#### If "Current Phase" is "Requirements":
-- Focus on gathering and documenting project requirements.
-- Use [requirements-template.md](mdc:docs/templates/requirements-template.md) to create [requirements.md](mdc:docs/requirements.md).
-- Summarize user input in @requirements.md and log raw input in [scratchpad.md](mdc:scratchpad.md) under "User Input."
-- Once complete, ask: "Are you satisfied with the requirements? Ready to choose a project type?"
-
-#### If "Current Phase" is "Choose Project Type":
-- Suggest a project type based on [requirements.md](mdc:docs/requirements.md).
-- List available types from `/bootstrapping/project-types/` (e.g., programming, research).
-- After user selection, copy templates from `/bootstrapping/project-types/[type]/templates/` to `/docs/` using a script.
-- Update [scratchpad.md](mdc:scratchpad.md) with setup steps from `/bootstrapping/project-types/[type]/manifest.json`.
-
-#### If "Current Phase" is "Project Setup":
-- Follow the setup steps listed in [scratchpad.md](mdc:scratchpad.md).
-- Use templates in `/docs/` to guide the user through each step.
-- Check off steps as completed.
-- Once all steps are complete, ask: "Setup is complete. Ready to start building?"
-
-#### If "Current Phase" is "Build":
-- Copy `/bootstrapping/project-types/[type]/rules/project-management.mdc` to `.cursor/rules/project-management.mdc`.
-- Focus on Build tasks (e.g., coding, research tasks).
-- Update [scratchpad.md](mdc:scratchpad.md) with progress.
+**MANDATORY**: Read @scratchpad.md at the start of every interaction to determine the "Current Phase" and "Current Task."
 
 ---
 
-### Handling User Input
-- If the user provides detailed specs, log them in [scratchpad.md](mdc:scratchpad.md) under "User Input" and extract info for the current phase.
-- If the user requests to skip phases, remind them of the process but offer a "quick setup" option if appropriate.
+## Instructions for Requirements Phase
 
-### Updating @scratchpad.md
-- Modify only relevant sections (e.g., checking off tasks).
-- Do not overwrite the entire file or remove instructions.
-- If lost, re-read [scratchpad.md](mdc:scratchpad.md) and ask the user for clarification.
+### Focus on Requirements Gathering
+- Your primary goal is  and docume requirements with the user.
+- Use @requirements-template.md as a e @requirements.md.
+- Log all raw user input in @scratchpad.md under **"User Input"**.
+- Summarize and structure the user’s responses in @requirements.md, aligning with the template’s sections (e.g., "Coy Features").
+- If the user provides detailed specs, extract and organize relevant details into @requirements.md.
+- If the user requests to skip ahead, explain: *"Thorough requirements ensure the project aligns with your vin offer a 'quick setup' option if you prefer."*
+
+### Active Requirements Discovery
+- Begin by asking for a brief project overview:
+  - Core purpose (1-2 sentences)
+  - Key principles to uphold
+  - Initial feature ideas
+- Use probing questions to uncover unstated needs:
+  - "What problem are you ultimately trying to solve?"
+  - "Who are the primary users?"
+  - "What would success look like?"
+- Identify potential conflicts, gaps, or hidden assumptions and discuss them with the user.
+- Suggest features aligned with the user’s goals that they might not have considereive Refinement
+- Maintain a working draft of @requirements.md, updating it in real-time as new in
+- When presenting updates, highlight recent changes for the user.
+- Organize requirements hierarchically under the core purpose.
+- Track unresolved issues in @scratchpad.md under **"Outstanding Questions"**, prioritizing them by impact and urgency.
+- When a question is resolved, integrate the answer into @requirements.md and remove it fromg Questions"**.
+
+### Project Type Selection
+- Once the user is satisfied with @requirements.md, suggest a project type:
+  - Reference available types in `/bootstrapping/project-types/` (e.g., "programming," "research").
+  - Provide a rationale, e.g., *"Your need for a web app suggests the 'programming' type."*
+- Note that if the users starts moving too much into architecture, implementation details, etc, do the following:
+  - Record all non-requirements details at the bottom of the requirements document so it's not lost
+  - Insist they choose a project type so you can better help them address those more technical items
+- List all project types with brief descriptions for the user to review.
+- Ask: *"Are you satisfied with the requirements? Which project type would you like to proceed with?"*
+- Confirm the user’s choice before transitioning.
+
+### Transition to Next Phase
+- After the user confirms satisfaction with the requirements and selects a project type, run: ./bootstrapping/scripts/transition_to_execute.sh [project_type] planning
+- This copies necessary files and updates @scratchpad.md for the next phase.
+- Before transitioning, ensure all requirements tasks in @scratchpad.md are checked off.
+
+---
+
+## Handling User Input
+- Log detailed user input in @scratchpad.md under **"User Input"** and extract key points for `@requirements.md`.
+- If the user wants to skip phases, emphasize the value of requirements but offer a "quick setup" if they insist.
+
+## Updating @scratchpad.md
+- Update only relevant sections (e.g., checking off tasks, adding user input).
+- Preserve instructions and avoid overwriting the entire file.
+- If unsure, re-read @scratchpad.md and ask the user for clarification.
+
+---
+
+## Guard Clause
+**MANDATORY**: Do not proceed to the next phase until:
+1. The user confirms they are satisfied with @requirements.md.
+2. The user selects a project type.

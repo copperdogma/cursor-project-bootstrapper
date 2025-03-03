@@ -19,7 +19,10 @@ When creating the `requirements.md` file for a new project:
 
 [PROJECT TITLE]
 
-**Note**: This document focuses on WHAT the system should do and WHY, not HOW it should be implemented. Implementation details belong in `design.md`.
+**Notes -- DO NOT REMOVE**
+- This document focuses on WHAT the system should do and WHY, not HOW it should be implemented.
+- When recording requirements that go beyond high-level requirements this document, refer back to `scratchpad.mdc`. Should we transition to the next phase? `scratchpad.mdc` will explain what script to run to do that.
+**Notes -- DO NOT REMOVE**
 
 ---
 
@@ -68,7 +71,10 @@ Below is a sample `requirements.md` for a hypothetical task manager app. Use thi
 
 Task Manager App
 
-**Note**: This document focuses on WHAT the system should do and WHY, not HOW it should be implemented. Implementation details belong in `design.md`.
+**Notes -- DO NOT REMOVE**
+- This document focuses on WHAT the system should do and WHY, not HOW it should be implemented.
+- When recording requirements that go beyond high-level requirements this document, refer back to `scratchpad.mdc`. Should we transition to the next phase? `scratchpad.mdc` will explain what script to run to do that.
+**Notes -- DO NOT REMOVE**
 
 ---
 

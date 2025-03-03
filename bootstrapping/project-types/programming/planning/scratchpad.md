@@ -1,5 +1,7 @@
 # Scratchpad - Planning Phase
 
+@scratchpad.md already exists and is your external memory. Use it to help you stay on track.
+
 **Current Phase**: Planning
 
 **Tasks**  

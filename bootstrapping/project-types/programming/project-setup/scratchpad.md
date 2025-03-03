@@ -5,7 +5,8 @@
 **Tasks**  
 - [ ] Follow `/docs/architecture.md` to install required packages (e.g., npm install)  
 - [ ] Configure development tools (e.g., ESLint, Prettier)  
-- [ ] Set up version control (e.g., git init)  
+- [ ] Set up version control (e.g., git init)
+- [ ] Erase and rewrite the README.md file so it's perfect for this newly set up project
 
 **User Input**  
 - [Log anything the user has said so far]
