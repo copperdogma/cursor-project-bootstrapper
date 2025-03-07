@@ -15,6 +15,9 @@ The framework currently supports two project types: **programming** and **resear
 - **Versatile Support**: Optimized for programming projects, with flexibility for other types like research.
 - **Comprehensive Documentation**: Generates organized files in `/docs` to keep your project on track.
 - **Collaborative Workflow**: Balances AI automation with your input at critical stages.
+- **Curated Starter Repositories**: For programming projects, helps select from established starter repositories.
+- **Clear Phase Transitions**: Explicit guidance on when and how to move between project phases.
+- **Extensible Plugin System**: Easily add new project types through the project-types plugin architecture.
 
 ---
 
@@ -22,22 +25,56 @@ The framework currently supports two project types: **programming** and **resear
 
 Your project begins with a minimal structure, containing only the `/docs/requirements.md` file. As the AI gathers requirements and you confirm a project type (e.g., **programming** or **research**), it copies a tailored set of files into `/docs` based on that type. The framework then guides you through the remaining setup specific to your project.
 
-Here’s the full structure after setup for a **programming** project (the most common use case):
+The complete structure of the bootstrapper framework consists of:
 
-- **`.cursor/rules`**: Defines AI behavior.
-  - `project-management.mdc`: Governs project setup and management.
-  - `scratchpad.mdc`: Manages the AI's scratchpad usage.
-- **`bootstrapping`**: Contains project-type configurations and scripts.
-- **`README.md`**: This guide to using the framework.
-- **`scratchpad.md`**: The AI's working memory, logging progress and issues.
-- **`/docs`**: Starts with only `requirements.md`. For a **programming** project, the AI adds:
+- **`.cursor/rules/`**: Contains MDC files that define AI behavior.
+  - `scratchpad.mdc`: Manages the AI's scratchpad usage (changes with each phase).
+  - `project-management.mdc`: Governs project management (added during the work phase).
+
+- **`bootstrapping/`**: Contains the plugin system and transition scripts.
+  - `project-types/`: The plugin architecture for different project types.
+    - `programming/`: Files and configurations for programming projects.
+    - `research/`: Files and configurations for research projects.
+    - Each project type contains subdirectories for different phases:
+      - `planning/`: Initial phase files and templates.
+      - `project-setup/`: Project setup phase files.
+      - `work/`: Implementation phase files.
+  - `scripts/`: Contains phase transition scripts.
+    - `transition_to_execute.sh`: Script that handles phase transitions.
+
+- **`docs/`**: Documentation files for your specific project.
   - `requirements.md`: Project goals and needs.
-  - `design.md`: High-level design or plan.
-  - `architecture.md`: Technical structure.
-  - `stories.md`: Task tracker.
-  - `/stories/`: Individual task files (e.g., `story-001-implement-login.md`).
+  - `templates/`: Contains templates for various document types.
+  - For a **programming** project, additional files include:
+    - `design.md`: High-level design or plan.
+    - `architecture.md`: Technical structure.
+    - `stories.md`: Task tracker with priority, status, and links.
+    - `stories/`: Individual task files (e.g., `story-001-implement-login.md`).
 
-**Note**: The files listed above are specific to **programming** projects. Other project types, like **research**, will receive a different set of files based on their own manifest, adapting to their unique needs. This ensures flexibility while keeping the setup relevant to your project.
+- **`scratchpad.md`**: The AI's working memory, updated for each phase.
+
+---
+
+## Project Types Plugin System
+
+The Cursor Project Bootstrapper uses a flexible plugin architecture that allows for different project types. Each project type is defined in the `bootstrapping/project-types/` directory and contains:
+
+- **`manifest.json`**: Defines the project type, its phases, and what files should be copied during each phase transition.
+- **Phase-specific directories**: Contains templates, configuration files, and guidance specific to each phase of that project type.
+
+The system currently includes:
+
+- **Programming**: A comprehensive project type for software development with planning, project setup, and work phases.
+- **Research**: A simplified project type focused on research-oriented tasks and documentation.
+
+To create a new project type:
+
+1. Create a new directory in `bootstrapping/project-types/` (e.g., `data-science/`).
+2. Define a `manifest.json` specifying phases and file mappings.
+3. Create phase-specific directories with appropriate template files.
+4. Add custom MDC rule files to guide the AI through your project type's workflow.
+
+This plugin architecture makes the framework easily extensible to support various project needs beyond the included types.
 
 ---
 
@@ -50,11 +87,12 @@ The AI follows a systematic process to bootstrap your project:
 3. **Design Creation**: Builds `/docs/design.md` aligned with the requirements (for **programming** projects).
 4. **Architecture Setup**: Creates `/docs/architecture.md` (for **programming** projects).
 5. **First Story**: Writes an initial task in `/docs/stories` and updates `/docs/stories.md` (for **programming** projects).
-6. **Build Phase**: Suggests next steps, resets `scratchpad.md`, and shifts to task management.
+6. **Project Setup**: For programming projects, helps find and evaluate appropriate starter repositories from curated lists.
+7. **Build Phase**: Suggests next steps, resets `scratchpad.md`, and shifts to task management.
 
 In the **Build Phase**, the AI:
 - Generates new tasks in `/docs/stories` (for **programming** projects).
-- Updates `/docs/stories.md` with task statuses.
+- Updates `/docs/stories.md` with task priorities and statuses.
 - Logs progress or blockers in `scratchpad.md`.
 - Seeks your guidance as needed.
 
@@ -62,9 +100,21 @@ In the **Build Phase**, the AI:
 
 ---
 
+## Document Format and Guidance
+
+Each document created by the bootstrapper contains a "CRITICAL NOTES" section that:
+- Explains the purpose of the document
+- Provides format guidance
+- Indicates when to transition to the next phase
+- References required script commands for transitions
+
+These notes help both you and the AI maintain consistency and progress smoothly through project phases.
+
+---
+
 ## Your Role
 
-You’re a key collaborator in this process:
+You're a key collaborator in this process:
 
 - **Provide Input**: Share project details to shape requirements.
 - **Review Documents**: Approve or refine files in `/docs`.
@@ -99,12 +149,14 @@ Enhance your experience with these tips:
 
 - **Use Claude 3.7 Thinking**: This is the best model for instruction-following, programming, and tool use.
 - **Be Specific**: Offer detailed input during requirements gathering for precise outcomes.
-- **Iterate**: Review and adjust documents in `/docs`—they’re designed to evolve.
+- **Iterate**: Review and adjust documents in `/docs`—they're designed to evolve.
 - **Use Version Control**: Track changes with Git or similar tools.
 - **Check Scratchpad**: If the AI veers off course, consult `scratchpad.md`, encourage it to do the same, and modify `scratchpad.md` or just tell the AI to do so and what you want.
+- **Phase Transitions**: Pay attention to the AI's prompts about moving to the next phase - these transitions are key to maintaining project momentum.
 
 ---
-https://github.com/copperdogma/ai-feed-consolidator
+https://github.com/copperdogma/cursor-project-bootstrapper
+
 ## Additional Notes
 
 - **Non-Programming Projects**: For types like research, the framework skips technical steps (e.g., architecture setup) and adapts accordingly.
