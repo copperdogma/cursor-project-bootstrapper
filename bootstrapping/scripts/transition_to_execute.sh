@@ -1,8 +1,8 @@
 #!/bin/bash
 # Purpose: Transition the project to the next phase by archiving the current scratchpad and copying phase-specific files as defined in manifest.json.
-# Usage: ./transition_to_execute.sh <project_type> <next_phase>
+# Usage: ./transition_to_execute.sh <project_type> [next_phase]
 #   - <project_type>: The type of project (e.g., "programming").
-#   - <next_phase>: The name of the phase to transition to (e.g., "project-setup").
+#   - [next_phase]: The name of the phase to transition to (e.g., "project-setup"). Optional - if not specified, the first phase from manifest.json will be used.
 
 # Define log file path (in the same directory as the script)
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
@@ -18,18 +18,15 @@ log() {
 log "Script started with arguments: $@"
 
 # Check for required arguments
-if [ -z "$1" ] || [ -z "$2" ]; then
-  echo "Error: Both project_type and next_phase are required."
-  echo "Usage: $0 <project_type> <next_phase>"
-  log "ERROR: Missing required arguments. Exiting."
+if [ -z "$1" ]; then
+  echo "Error: project_type is required."
+  echo "Usage: $0 <project_type> [next_phase]"
+  log "ERROR: Missing required project_type argument. Exiting."
   exit 1
 fi
 
 PROJECT_TYPE=$1
 NEXT_PHASE=$2
-
-# Log arguments
-log "Project Type: $PROJECT_TYPE, Next Phase: $NEXT_PHASE"
 
 # Define paths
 MANIFEST="bootstrapping/project-types/$PROJECT_TYPE/manifest.json"
@@ -41,6 +38,21 @@ if [ ! -f "$MANIFEST" ]; then
   log "ERROR: manifest.json not found for project type '$PROJECT_TYPE'. Exiting."
   exit 1
 fi
+
+# If next_phase is not specified, get the first phase from manifest.json
+if [ -z "$NEXT_PHASE" ]; then
+  NEXT_PHASE=$(jq -r '.phases[0].name' "$MANIFEST" 2>/dev/null)
+  if [ -z "$NEXT_PHASE" ] || [ "$NEXT_PHASE" == "null" ]; then
+    echo "Error: Could not determine the first phase from manifest.json"
+    log "ERROR: Failed to extract first phase from manifest.json. Exiting."
+    exit 1
+  fi
+  echo "No phase specified. Using first phase from manifest: '$NEXT_PHASE'"
+  log "No phase specified. Automatically selected first phase: '$NEXT_PHASE'"
+fi
+
+# Log arguments
+log "Project Type: $PROJECT_TYPE, Next Phase: $NEXT_PHASE"
 
 # Archive current scratchpad.md with timestamp
 if [ -f "scratchpad.md" ]; then

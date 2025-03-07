@@ -13,7 +13,8 @@
         {"source": "planning/design.md", "destination": "docs/design.md"},
         {"source": "planning/architecture.md", "destination": "docs/architecture.md"},
         {"source": "planning/stories.md", "destination": "docs/stories.md"},
-        {"source": "planning/stories-template.md", "destination": "docs/templates/stories-template.md"}
+        {"source": "planning/stories-template.md", "destination": "docs/templates/stories-template.md"},
+        {"source": "planning/story-template.md", "destination": "docs/templates/story-template.md"}
       ]
     },
     {
@@ -28,8 +29,7 @@
       "files": [
         {"source": "work/scratchpad.mdc", "destination": ".cursor/rules/scratchpad.mdc"},
         {"source": "work/scratchpad.md", "destination": "scratchpad.md"},
-        {"source": "work/project-management.mdc", "destination": ".cursor/rules/project-management.mdc"},
-        {"source": "work/story-template.md", "destination": "docs/templates/story-template.md"}
+        {"source": "work/project-management.mdc", "destination": ".cursor/rules/project-management.mdc"}
       ]
     }
   ]

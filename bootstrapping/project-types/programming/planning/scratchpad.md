@@ -7,7 +7,8 @@
 **Tasks**  
 - [ ] Use `/docs/templates/design-template.md` to create `/docs/design.md`
 - [ ] Use `/docs/templates/architecture-template.md` to create `/docs/architecture.md`  
-- [ ] Use `/docs/templates/stories-template.md` to create the set of stories for this project `/docs/stories/stories.md`  
+- [ ] Use `/docs/templates/stories-template.md` to create the set of stories for this project `/docs/stories/stories.md`
+- [ ] Check the `Non-Requirements Detail` section of `requirements.md` and move anything you find there into the newly created design.md or architecture.md documents.
 - [ ] Add a task item in this document for each story added to `/docs/stories/stories.md`  
 - [ ] Use `/docs/templates/story-template.md` to create each story like so: `/docs/stories/story-001.md`  
 
