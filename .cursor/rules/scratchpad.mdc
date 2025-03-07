@@ -43,7 +43,7 @@ Remember that `/docs/requirements.md` is the only document that survives when mo
 
 ### Transition
 - When you have sufficient MVP requirements and the user confirms project type, run:
-  `./bootstrapping/scripts/transition_to_execute.sh [project_type] planning`
+  `./bootstrapping/scripts/transition_to_execute.sh [project_type]`
 
 ### Guard Clause
 **MANDATORY**: You CANNOT proceed to the next phase without:

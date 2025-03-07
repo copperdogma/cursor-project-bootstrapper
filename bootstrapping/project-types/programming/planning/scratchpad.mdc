@@ -5,28 +5,25 @@ alwaysApply: true
 ---
 # Planning Phase Scratchpad Memory File
 
-[scratchpad.md](mdc:scratchpad.md) already exists. It tracks the Plaanning Phase tasks and is your external memory. Use it to constntly help you stay on track.
+[scratchpad.md](mdc:scratchpad.md) already exists. It tracks the Planning Phase tasks and is your external memory. Use it to constantly help you stay on track.
 
 Update it whenever you:
-- Start a new task or phase (edit "Current Phase" and "Next Steps").
-- Finish an action (log in "Recent Actions," move to "Completed Tasks").
-- Hit an issue (add to "Issues or Blockers").
-- Make a decision (note in "Decisions Made").
+- Complete a task (check off items in the checklist)
+- Gather new user input (add under "User Input")
+- Identify issues (add under "Issues or Blockers")
+- Make important decisions (add under "Decisions Made")
 
 ---
 
 ### Instructions
-- Use `/docs/templates/design-template.md` to guide the creation of `/docs/design.md`.
-- Use `/docs/templates/architecture-template.md` to guide the creation of `/docs/architecture.md`.
-- Use `/docs/templates/story-template.md` to prepare initial story files in `/docs/stories/` (e.g., `story-001-implement-oauth-login.md`).
-- If `/docs/design.md` or other documents deviate from the expected format, refer back to the templates in `/docs/templates/` to correct them.
-- **First Step**: Extract anything from [requirements.md](mdc:docs/requirements.md) that should go in `/docs/design.md` or `/docs/architecture.md` and move it into those documents.
-- **Quick Start**: If the user requests a quick start, use all provided input to draft the documents, make assumptions where needed, and ask the user to confirm them.
-- Once all tasks in [scratchpad.md](mdc:scratchpad.md) are checked off, ask: "Are you ready to move to the Project Setup phase?"
+- Read [scratchpad.md](mdc:scratchpad.md) and follow the detailed checklists in that document.
+- Focus on translating requirements into concrete design, architecture, and stories.
+- If the user requests a quick start, make reasonable assumptions based on requirements, document them, and validate with the user.
+- When all tasks in [scratchpad.md](mdc:scratchpad.md) are checked off, ask if the user is ready to move to the Project Setup phase.
 
 ### Transition
-- When the user confirms they're ready to move to the Project Setup phase, run the shell command `./bootstrapping/scripts/transition_to_execute.sh programming project-setup`
-    - This will copy all files to the correct places to start the Project Setup phase.
+- When the user confirms readiness to move to the Project Setup phase, run:
+  `./bootstrapping/scripts/transition_to_execute.sh programming project-setup`
 
 ### Guard Clause
 **MANDATORY**: You CANNOT proceed to the next phase unless ALL tasks in [scratchpad.md](mdc:scratchpad.md) are checked off as complete.

@@ -18,7 +18,7 @@
   - [ ] Clear MVP definition
   - [ ] Prioritized feature list
   - [ ] User stories for core flows
-  - [ ] Any non-requirements details in the "Non-Requirements Detail" section at the bottom
+  - [ ] Any non-requirements details or outstanding questions in the "Non-Requirements Detail" section at the bottom
 
 **Project Type Selection**
 - [ ] Determine appropriate project type:
@@ -39,12 +39,3 @@
   "I think we have enough requirements for an MVP version of the project. Would you like to start building with the [selected_project_type] project type?"
 - If yes, run: `./bootstrapping/scripts/transition_to_execute.sh [project_type]`
     - Then read the new scratchpad.mdc and scratchpad.md and follow the new instructions.
-
-**User Input**  
-- [Log key user requirements here]
-
-**Outstanding Questions**
-- [Track critical questions about the MVP here]
-
-**Issues or Blockers**  
-- [Note anything preventing clear MVP definition]

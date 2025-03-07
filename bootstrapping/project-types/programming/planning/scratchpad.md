@@ -4,19 +4,44 @@
 
 **Current Phase**: Planning
 
-**Tasks**  
-- [ ] Use `/docs/templates/design-template.md` to create `/docs/design.md`
-- [ ] Use `/docs/templates/architecture-template.md` to create `/docs/architecture.md`  
-- [ ] Use `/docs/templates/stories-template.md` to create the set of stories for this project `/docs/stories/stories.md`
-- [ ] Check the `Non-Requirements Detail` section of `requirements.md` and move anything you find there into the newly created design.md or architecture.md documents.
-- [ ] Add a task item in this document for each story added to `/docs/stories/stories.md`  
-- [ ] Use `/docs/templates/story-template.md` to create each story like so: `/docs/stories/story-001.md`  
+**Planning Phase Tasks**
+- [ ] Create design document:
+  - [ ] Use `/docs/templates/design-template.md` to create `/docs/design.md`
+  - [ ] Ensure alignment with requirements
+  - [ ] Include UI/UX considerations if applicable
+  - [ ] Document key design decisions
+- [ ] Create architecture document:
+  - [ ] Use `/docs/templates/architecture-template.md` to create `/docs/architecture.md`
+  - [ ] Define system components and their interactions
+  - [ ] Specify technologies and frameworks
+  - [ ] Document architectural decisions and trade-offs
+- [ ] Extract and move content from the "Non-Requirements Detail" section of `requirements.md`:
+  - [ ] Review `/docs/requirements.md` for implementation details
+  - [ ] Move relevant details to the appropriate design or architecture document
+  - [ ] Remove the section from requirements.md after ensuring all details are captured
+- [ ] Create user stories:
+  - [ ] Use `/docs/templates/stories-template.md` to create `/docs/stories.md`
+  - [ ] Break down requirements into implementable stories
+  - [ ] Prioritize stories based on dependencies and importance
+  - [ ] Add a task item in this document for each story added to stories.md
+- [ ] For each user story:
+  - [ ] Use `/docs/templates/story-template.md` to create individual story files (e.g., `/docs/stories/story-001.md`)
+  - [ ] Ensure each story has clear acceptance criteria
+  - [ ] Link stories to requirements and design documents
+
+**Transition to Next Phase**
+- When all planning tasks are complete, ask the user: "Are you ready to move to the Project Setup phase?"
+- If yes, run: `./bootstrapping/scripts/transition_to_execute.sh programming project-setup`
+  - This will copy all files to the correct places to start the Project Setup phase
 
 **User Input**  
-- [Log anything the user has said so far]
+- [Log key user decisions and feedback here]
 
 **Quick Start Assumptions**  
-- [If quick start is used, list assumptions made, e.g., "Assumed Node.js project based on user mentioning npm."]
+- [If quick start is used, list assumptions made, e.g., "Assumed minimal UI based on requirements."]
 
 **Issues or Blockers**  
-- [Log any issues]
+- [Note anything preventing progress]
+
+**Decisions Made**
+- [Log important decisions here]
