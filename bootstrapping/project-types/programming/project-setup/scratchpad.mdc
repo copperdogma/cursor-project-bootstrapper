@@ -16,14 +16,10 @@ Update it whenever you:
 ---
 
 ### Instructions
-- Follow `/docs/architecture.md` to install required packages and configure tools.
-- Set up the development environment (e.g., install packages, configure tools).
-- If you have questions, first refer back to `/docs/requirements.md` and `/docs/design.md` and if still in doubt ask the user.
+- Read [scratchpad.md](mdc:scratchpad.md) and follow the checklist in that document.
+- The user may change their mind as they go. This is fine. Update architecture.md and [scratchpad.md](mdc:scratchpad.md) accordingly.
+- If you have questions, first refer back to [requirements.md](mdc:docs/requirements.md) and `/docs/design.md` and if still in doubt ask the user.
 - **Quick Start**: If the user requests a quick start, use their input to choose the most appropriate tools and languages, validate with the user, and if the user agrees, install and configure them.
-- Once all tasks in @scratchpad.md are checked off, ask: "Are you ready to move to the Work phase?"
-
-### Transition
-- Run `./bootstrapping/scripts/transition_to_execute.sh programming work` to move to the next phase.
 
 ### Guard Clause
 **MANDATORY**: You CANNOT prext phase (work/implementation) unless ALL tasks in @scratchpad.md are checked off as complete.

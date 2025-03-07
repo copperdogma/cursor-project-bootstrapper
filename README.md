@@ -45,13 +45,12 @@ Here’s the full structure after setup for a **programming** project (the most 
 
 The AI follows a systematic process to bootstrap your project:
 
-1. **Introduction**: Engages with you to understand your project and identify the appropriate project type (e.g., **programming** or **research**).
-2. **Requirements Gathering**: Collects details from you and drafts `/docs/requirements.md`.
-3. **Project Type Selection**: Based on the requirements, the AI suggests a project type and, upon your confirmation, copies the relevant files for that type into `/docs`.
-4. **Design Creation**: Builds `/docs/design.md` aligned with the requirements (for **programming** projects).
-5. **Architecture Setup**: Creates `/docs/architecture.md` (for **programming** projects).
-6. **First Story**: Writes an initial task in `/docs/stories` and updates `/docs/stories.md` (for **programming** projects).
-7. **Build Phase**: Suggests next steps, resets `scratchpad.md`, and shifts to task management.
+1. **Requirements Gathering**: Collects details from you and drafts `/docs/requirements.md`.
+2. **Project Type Selection**: Based on the requirements, the AI suggests a project type and, upon your confirmation, copies the relevant files for that type into `/docs`.
+3. **Design Creation**: Builds `/docs/design.md` aligned with the requirements (for **programming** projects).
+4. **Architecture Setup**: Creates `/docs/architecture.md` (for **programming** projects).
+5. **First Story**: Writes an initial task in `/docs/stories` and updates `/docs/stories.md` (for **programming** projects).
+6. **Build Phase**: Suggests next steps, resets `scratchpad.md`, and shifts to task management.
 
 In the **Build Phase**, the AI:
 - Generates new tasks in `/docs/stories` (for **programming** projects).
@@ -98,13 +97,14 @@ To launch your project with the Cursor Project Bootstrapper:
 
 Enhance your experience with these tips:
 
+- **Use Claude 3.7 Thinking**: This is the best model for instruction-following, programming, and tool use.
 - **Be Specific**: Offer detailed input during requirements gathering for precise outcomes.
 - **Iterate**: Review and adjust documents in `/docs`—they’re designed to evolve.
 - **Use Version Control**: Track changes with Git or similar tools.
 - **Check Scratchpad**: If the AI veers off course, consult `scratchpad.md`, encourage it to do the same, and modify `scratchpad.md` or just tell the AI to do so and what you want.
 
 ---
-
+https://github.com/copperdogma/ai-feed-consolidator
 ## Additional Notes
 
 - **Non-Programming Projects**: For types like research, the framework skips technical steps (e.g., architecture setup) and adapts accordingly.

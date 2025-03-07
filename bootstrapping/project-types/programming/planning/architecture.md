@@ -2,7 +2,11 @@
 
 [PROJECT TITLE]
 
-**Note**: This document details the architectural decisions and setup progress for the project.
+**START CRITICAL NOTES -- DO NOT REMOVE**
+- This document details the architectural decisions and setup progress for the project.
+- Keep this document formatted according to `architecture-template.md`
+- Should we transition to the next phase? `scratchpad.mdc` will explain what script to run to do that.
+**END CRITICAL NOTES -- DO NOT REMOVE**
 
 ---
 

@@ -2,7 +2,11 @@
 
 [PROJECT TITLE]
 
-**Note**: This document outlines the technical design and implementation details (HOW), based on the requirements in `requirements.md`.
+**START CRITICAL NOTES -- DO NOT REMOVE**
+- This document outlines the technical design and implementation details (HOW), based on the requirements in `requirements.md`.
+- Keep this document formatted according to `design-template.md`
+- Should we transition to the next phase? `scratchpad.mdc` will explain what script to run to do that.
+**END CRITICAL NOTES -- DO NOT REMOVE**
 
 ---
 

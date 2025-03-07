@@ -24,10 +24,10 @@ When creating the `stories.md` file for a new project:
 ---
 
 ## Story List
-| Story ID | Title                | Status    | Link                       |
-|----------|----------------------|-----------|----------------------------|
-| [001]    | [SHORT DESCRIPTION]  | [STATUS]  | [/docs/stories/story-001-short-description.md] |
-| [002]    | [SHORT DESCRIPTION]  | [STATUS]  | [/docs/stories/story-002-short-description.md] |
+| Story ID | Title                | Priority    | Status    | Link                       |
+|----------|----------------------|-------------|----------------------------|
+| [001]    | [SHORT DESCRIPTION]  | [PRIORITY]  | [STATUS]  | [/docs/stories/story-001-short-description.md] |
+| [002]    | [SHORT DESCRIPTION]  | [PRIORITY]  | [STATUS]  | [/docs/stories/story-002-short-description.md] |
 
 ## Notes
 <!-- AI: Add any additional notes or considerations -->
