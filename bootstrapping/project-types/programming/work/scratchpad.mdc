@@ -7,19 +7,23 @@ alwaysApply: true
 
 [scratchpad.md](mdc:scratchpad.md) already exists and is your external memory for your current task. Use it to constantly help you stay on track.
 
-Update it whenever you:
-- Start a new task or phase (edit "Current Phase" and "Next Steps").
-- Finish an action (log in "Recent Actions," move to "Completed Tasks").
-- Hit an issue (add to "Issues or Blockers").
-- Make a decision (note in "Decisions Made").
+Suggested structure for [scratchpad.md](mdc:bootstrapping/project-types/programming/work/scratchpad.md):
+- **Current Story**: Update with the story you're currently working on from `/docs/stories.md`
+- **Current Task**: Update with the specific task you're working on at this moment
+- **Plan Checklist**: Maintain a checklist of work required to complete the current task/story
+- **Issues/Blockers**: Document any issues that arise during implementation
+- **Recently Completed**: Archive tasks that have been completed
+- **Decisions Made**: Log important decisions that affect the implementation
+- **Lessons Learned**: Document approaches that were tried and failed, and why they failed
 
 ---
 
 ### Instructions
-- Follow [project-management.mdc](mdc:.cursor/rules/project-management.mdc) for work-specific instrucitons.
+- Follow `project-management.mdc` for work-specific instrucitons.
 - Work on the current task in [scratchpad.md](mdc:scratchpad.md).
+- Frequently suggest to the user what the next obvious steps are and suggest the most logical one.
 - Update `/docs/stories.md` with story statuses and progress.
 - When the current task is complete, reset [scratchpad.md](mdc:scratchpad.md) and start the next task from `/docs/stories.md`, logging progress in [scratchpad.md](mdc:scratchpad.md).
-    - Before erasing [scratchpad.md](mdc:scratchpad.md), capture any new and essential knowledge from [scratchpad.md](mdc:bootstrapping/project-types/programming/work/scratchpad.md) into other documents so it's not lost.
+    - Before erasing [scratchpad.md](mdc:bootstrapping/project-types/programming/work/scratchpad.md), capture any new and essential knowledge from [scratchpad.md](mdc:scratchpad.md) into other documents so it's not lost.
 
 Keep it concise (<300 lines): summarize or remove outdated info regularly to prevent overloading the context. Focus on the current phase and immediate next steps.

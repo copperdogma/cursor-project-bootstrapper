@@ -1,7 +1,5 @@
 # Scratchpad - Work Phase
 
-Suggested headings: Current Story, Current Task, Plan Checklist, Issues/Blockers, Recently Completed, Decisions Made, Lessons Learned
-
 ## Current Story
 [Current story from /docs/stories.md]
 
