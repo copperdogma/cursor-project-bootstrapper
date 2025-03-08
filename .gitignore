@@ -1,0 +1,23 @@
+# Cursor-specific files
+.cursor/
+ccheck-in-diff.mdc
+
+# OS specific files
+.DS_Store
+Thumbs.db
+
+# Node.js dependencies
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# Python virtual environments
+venv/
+env/
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Logs and databases
+*.log
+*.sqlite 
