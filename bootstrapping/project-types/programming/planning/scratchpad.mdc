@@ -18,6 +18,7 @@ Update it whenever you:
 ### Instructions
 - Read [scratchpad.md](mdc:scratchpad.md) and follow the detailed checklists in that document.
 - Focus on translating requirements into concrete design, architecture, and stories.
+- Frequently suggest to the user what the next obvious steps are and suggest the most logical one.
 - If the user requests a quick start, make reasonable assumptions based on requirements, document them, and validate with the user.
 - When all tasks in [scratchpad.md](mdc:scratchpad.md) are checked off, ask if the user is ready to move to the Project Setup phase.
 

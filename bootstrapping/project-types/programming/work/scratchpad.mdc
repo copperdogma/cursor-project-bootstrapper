@@ -7,7 +7,7 @@ alwaysApply: true
 
 [scratchpad.md](mdc:scratchpad.md) already exists and is your external memory for your current task. Use it to constantly help you stay on track.
 
-Suggested structure for [scratchpad.md](mdc:bootstrapping/project-types/programming/work/scratchpad.md):
+Suggested structure for [scratchpad.md](mdc:scratchpad.md):
 - **Current Story**: Update with the story you're currently working on from `/docs/stories.md`
 - **Current Task**: Update with the specific task you're working on at this moment
 - **Plan Checklist**: Maintain a checklist of work required to complete the current task/story
@@ -16,6 +16,8 @@ Suggested structure for [scratchpad.md](mdc:bootstrapping/project-types/programm
 - **Decisions Made**: Log important decisions that affect the implementation
 - **Lessons Learned**: Document approaches that were tried and failed, and why they failed
 
+If [scratchpad.md](mdc:scratchpad.md) is missing any of these sections, restore them immediately. Never remove this structure.
+
 ---
 
 ### Instructions
@@ -23,7 +25,9 @@ Suggested structure for [scratchpad.md](mdc:bootstrapping/project-types/programm
 - Work on the current task in [scratchpad.md](mdc:scratchpad.md).
 - Frequently suggest to the user what the next obvious steps are and suggest the most logical one.
 - Update `/docs/stories.md` with story statuses and progress.
-- When the current task is complete reset [scratchpad.md](mdc:scratchpad.md) and start the next task from `/docs/stories.md`, logging progress in [scratchpad.md](mdc:scratchpad.md).
-    - Before erasing [scratchpad.md](mdc:bootstrapping/project-types/programming/work/scratchpad.md), capture any new and essential knowledge from [scratchpad.md](mdc:scratchpad.md) into other documents so it's not lost.
+- When the current task is complete:
+  1. Create a timestamped archive by copying the current scratchpad.md to `/docs/build-log/scratchpad-[timestamp].md` (e.g., `/docs/build-log/scratchpad-20250307-1530.md`)
+  2. Extract and capture any new and essential knowledge from [scratchpad.md](mdc:scratchpad.md) into other appropriate documents so it's not lost
+  3. Reset [scratchpad.md](mdc:scratchpad.md) and set it up for the next task from `/docs/stories.md`
 
 Keep it concise (<300 lines): summarize or remove outdated info regularly to prevent overloading the context. Focus on the current phase and immediate next steps.
