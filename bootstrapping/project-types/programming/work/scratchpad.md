@@ -1,20 +1,27 @@
 # Scratchpad - Work Phase
 
-**Current Phase**: Work
+Suggested headings: Current Story, Current Task, Plan Checklist, Issues/Blockers, Recently Completed, Decisions Made, Lessons Learned
 
-**Current Task**: [Current task from /docs/work.md]
+## Current Story
+[Current story from /docs/stories.md]
 
-**Progress**  
-- [Log task progress]
+## Current Task
+[What we're working on this moment]
 
-**User Input**  
-- [Log anything the user has said so far]
+## Plan Checklist
+- [ ] [Checklist of work required to complete the current Task/Story]
 
-**Quick Start Assumptions**  
-- [If quick start is used, list assumptions made]
-
-**Issues or Blockers**  
+## Issues/Blockers
 - [Log any issues]
 
-**Decisions Made**  
+## Recently Completed
+- [Archive of completed tasks]
+
+## Decisions Made
 - [Log decisions]
+
+## Lessons Learned
+- [Log things that were tried and failed and why they failed]
+
+
+Keep this file concise (<300 lines): summarize or remove outdated info regularly to prevent overloading the context. Focus on the current phase and immediate next steps.

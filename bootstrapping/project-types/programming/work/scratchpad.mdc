@@ -20,5 +20,6 @@ Update it whenever you:
 - Work on the current task in [scratchpad.md](mdc:scratchpad.md).
 - Update `/docs/stories.md` with story statuses and progress.
 - When the current task is complete, reset [scratchpad.md](mdc:scratchpad.md) and start the next task from `/docs/stories.md`, logging progress in [scratchpad.md](mdc:scratchpad.md).
+    - Before erasing [scratchpad.md](mdc:scratchpad.md), capture any new and essential knowledge from [scratchpad.md](mdc:bootstrapping/project-types/programming/work/scratchpad.md) into other documents so it's not lost.
 
 Keep it concise (<300 lines): summarize or remove outdated info regularly to prevent overloading the context. Focus on the current phase and immediate next steps.
