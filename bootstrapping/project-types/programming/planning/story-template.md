@@ -33,6 +33,7 @@ When creating a new story file in the `/docs/stories` folder:
 <!-- AI: List the conditions that must be met for this story to be considered complete -->
 - [CRITERION 1]
 - [CRITERION 2]
+- [ ] User must sign off on functionality before story can be marked complete.
 
 ## Tasks
 <!-- AI: List the tasks needed to complete this story -->
@@ -72,6 +73,8 @@ Below is a sample story file for a hypothetical task manager app. Use this as a 
 - [ ] Implement the backend API endpoint for task creation
 - [ ] Connect the form to the backend API
 - [ ] Test the task creation flow
+- [ ] User must sign off on functionality before story can be marked complete.
+
 
 ## Notes
 - Ensure that the form validates input before submission.

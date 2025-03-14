@@ -21,6 +21,7 @@ If [scratchpad.md](mdc:scratchpad.md) is missing any of these sections, restore 
 ---
 
 ### Instructions
+- Always add tasks as checklists to they can be tracked.
 - Follow `project-management.mdc` for work-specific instrucitons.
 - Work on the current task in [scratchpad.md](mdc:scratchpad.md).
 - Frequently suggest to the user what the next obvious steps are and suggest the most logical one.
