@@ -25,6 +25,7 @@ If [scratchpad.md](mdc:scratchpad.md) is missing any of these sections, restore 
 - Follow `project-management.mdc` for work-specific instrucitons.
 - Work on the current task in [scratchpad.md](mdc:scratchpad.md).
 - Frequently suggest to the user what the next obvious steps are and suggest the most logical one.
+- Reorganize [scratchpad.md](mdc:scratchpad.md) now and then, putting unfinished tasks at the top and finished ones at the bottom.
 - Update `/docs/stories.md` with story statuses and progress.
 - When the current task is complete:
   1. Create a timestamped archive by copying the current scratchpad.md to `/docs/build-log/scratchpad-[timestamp].md` (e.g., `/docs/build-log/scratchpad-20250307-1530.md`)

@@ -1,10 +1,28 @@
 # Cursor Project Bootstrapper
 
-Welcome to the **Cursor Project Bootstrapper**! This AI-powered framework is designed to streamline the setup of new projects within Cursor, an innovative development environment. Whether you're launching a software development project or exploring other endeavors, this tool collaborates with you to establish a solid foundation, leveraging AI to save time and enhance organization.
+> **🚀 This is a GitHub template repository!** Click "Use this template" to create your own project.
+
+Welcome to the **Cursor Project Bootstrapper**! This GitHub template repository provides an AI-powered framework designed to streamline the setup of new projects within Cursor, an innovative development environment. Whether you're launching a software development project or exploring other endeavors, this template collaborates with you to establish a solid foundation, leveraging AI to save time and enhance organization.
 
 You can [download the Cursor IDE here](https://www.cursor.com/).
 
 The framework currently supports two project types: **programming** and **research**. The **programming** type is fully equipped for software development, while **research** serves as an example to demonstrate the framework's adaptability. You can customize or extend it for other project types as needed.
+
+## Quick Start
+
+Ready to bootstrap your next project? Choose your preferred approach:
+
+### Option 1: GitHub Template (Recommended)
+1. **Click "Use this template"** → Create a new repository
+2. **Clone your new repo** → Open it in Cursor IDE  
+3. **Enable Agent Mode** in Composer → Start chatting about your project
+
+### Option 2: Local Clone
+1. **Clone this repo** into your project folder → Open in Cursor IDE
+2. **Enable Agent Mode** in Composer → Start chatting about your project
+3. **Initialize your own git repo** when ready (optional)
+
+The AI will guide you through the entire setup process!
 
 ---
 
@@ -127,19 +145,40 @@ The AI automates setup and documentation, but your vision drives the project for
 
 ## Getting Started
 
-To launch your project with the Cursor Project Bootstrapper:
+Choose your preferred approach to launch your project with the Cursor Project Bootstrapper:
 
-1. **Create a New Folder**: Start with an empty folder for your project.
-2. **Copy Framework Files**: From this repository, copy the following into your project root:
-   - `.cursor` folder (contains `rules`)
-   - `bootstrapping` folder
-   - `docs` folder (initially contains only `requirements.md`)
-   - `scratchpad.md`
-3. **Open Cursor**: Load your project folder in Cursor.
-4. **Access Composer**: Go to the Composer tab.
-5. **Select Claude Sonnet 3.7 Thinking**: Choose this model for best results.
-6. **Enable Agent Mode**: Activate agent mode in Composer.
-7. **Start the Conversation**: Describe your project (e.g., "I want to build a task manager app"). The AI will initiate setup, creating all necessary files in `/docs` based on the selected project type.
+### Approach 1: GitHub Template (Recommended)
+
+1. **Use This Template**: Click the green "Use this template" button at the top of this GitHub repository page, then select "Create a new repository".
+2. **Name Your Project**: Give your new repository a meaningful name for your project.
+3. **Clone Your New Repository**: Clone your newly created repository to your local machine:
+   ```bash
+   git clone https://github.com/your-username/your-project-name.git
+   cd your-project-name
+   ```
+
+### Approach 2: Local Clone
+
+1. **Clone This Repository**: Clone this repository directly into your project folder:
+   ```bash
+   git clone https://github.com/copperdogma/cursor-project-bootstrapper.git my-project-name
+   cd my-project-name
+   ```
+2. **Optional - Set Up Your Own Git Repository**: If you want to track your project separately:
+   ```bash
+   rm -rf .git
+   git init
+   git add .
+   git commit -m "Initial project setup with Cursor Project Bootstrapper"
+   ```
+
+### Continue With Either Approach
+
+4. **Open in Cursor**: Load your project folder in Cursor IDE.
+5. **Access Composer**: Go to the Composer tab in Cursor.
+6. **Select Claude Sonnet 3.7 Thinking**: Choose this model for best results.
+7. **Enable Agent Mode**: Activate agent mode in Composer.
+8. **Start the Conversation**: Describe your project (e.g., "I want to build a task manager app"). The AI will initiate setup, creating all necessary files in `/docs` based on the selected project type.
 
 ---
 
@@ -159,9 +198,10 @@ https://github.com/copperdogma/cursor-project-bootstrapper
 
 ## Additional Notes
 
+- **Usage Options**: You can either use this as a GitHub template (recommended) or clone it directly into your project folder. Both approaches work perfectly.
 - **Non-Programming Projects**: For types like research, the framework skips technical steps (e.g., architecture setup) and adapts accordingly.
 - **Troubleshooting**: If issues emerge, check `scratchpad.md` for logged problems and respond to AI prompts.
-- **Post-Setup**: After bootstrapping, you may archive or remove the `bootstrapping` folder.
+- **Post-Setup**: After bootstrapping, you may archive or remove the `bootstrapping` folder to keep only your project files.
 
 ---
 

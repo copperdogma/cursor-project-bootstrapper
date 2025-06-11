@@ -1,6 +1,12 @@
 # Scratchpad - Work Phase
 
-## Current Story
+**NOTES:
+- All To Do items should be added as checklists.
+- Do not check something off unless you're confident it's complete.
+- Reorganize now and then, putting unfinished tasks at the top and finished ones at the bottom.
+**
+
+    ## Current Story
 [Current story from /docs/stories.md]
 
 ## Current Task
