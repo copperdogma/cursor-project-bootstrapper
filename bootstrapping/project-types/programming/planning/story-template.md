@@ -44,6 +44,16 @@ When creating a new story file in the `/docs/stories` folder:
 <!-- AI: Add any additional notes or considerations -->
 [FILL IN]
 
+## Work Log
+<!-- AI: This section is for detailed implementation history. Use the build-story.md command to work on stories, which will automatically maintain this log. -->
+<!-- Each entry should include: timestamp (YYYYMMDD-HHMM), action performed, outcome, key observations, next steps -->
+<!-- Example entry:
+### 20251126-1430 — Implemented feature X
+- **Result:** Success/Failure/Blocked
+- **Notes:** Key observations or lessons learned
+- **Next:** Next step or open question
+-->
+
 ---
 
 ## Sample

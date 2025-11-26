@@ -1,52 +1,34 @@
 ---
-description: AI memory system
+description: Work Phase Scratchpad Rules
 globs: 
 alwaysApply: true
 ---
----
-description: AI memory system
-globs: 
-alw
----
-# Requirements Phase Scratchpad Memory File
+# Work Phase Scratchpad Memory File
 
-[scratchpad.md](mdc:scratchpad.md) already exists. It tracks the Requirements Phase tasks and is your external memory. Use it to constantly help you stay on track.
+[scratchpad.md](mdc:scratchpad.md) exists as your **session context** for the current work. It's a lightweight, focused view of what you're doing right now.
 
-Update it whenever you:
-- Complete a task (check off items in the checklist)
-- Gather new user input (add under "User Input")
-- Identify issues (add under "Issues or Blockers")
-- Discover outsons (add under "Outstanding Questions")
+**Important**: Detailed implementation history belongs in individual story files (see `build-story.md` command). The scratchpad is for active session context only, not a complete history repository.
 
-Remember that `/docs/requirements.md` is the only document that survives when moving between phases. Any implementation details, architecture ideas, or other non-requirements information should be documented in the "Non-Requirements Detail" section at the bottom of `/docs/requirements.md`, not in scratchpad.md.
+Suggested structure for [scratchpad.md](mdc:scratchpad.md):
+- **Current Story**: Link to the story you're currently working on from `/docs/stories.md`
+- **Current Task**: Brief description of what you're working on this moment
+- **Plan Checklist**: Quick checklist of work required for the current task/story
+- **Issues/Blockers**: Active issues or blockers right now
+- **Decisions Made**: Recent decisions that affect current work (detailed decisions go in story work logs)
+
+If [scratchpad.md](mdc:scratchpad.md) is missing any of these sections, restore them immediately. Never remove this structure.
 
 ---
 
 ### Instructions
-- Read [scratchpad.md](mdc:scratchpad.md) and follow the checklist in that document.
-- Focus on gathering a clear MVP (Minimum Viable Product) definition.
-- Prioritize understanding core features vs nice-to-haves.
-- Update `/docs/requirements.md` with organized requirements based on user input.
-- **Proactively signal** when there's enough information to start building.
-- **Quick Start**: If the user requests to skip steps, offer a streamlined approach.
+- Always add tasks as checklists so they can be tracked.
+- Follow `project-management.mdc` for work-specific instructions.
+- Use [scratchpad.md](mdc:scratchpad.md) for **current session context** - what you're doing right now.
+- Detailed implementation history (attempts, failures, solutions) should go in story work logs (see `build-story.md` command).
+- Frequently suggest to the user what the next obvious steps are and suggest the most logical one.
+- Reorganize [scratchpad.md](mdc:scratchpad.md) now and then, putting unfinished tasks at the top and finished ones at the bottom.
+- Update `/docs/stories.md` with story statuses and progress.
+- **Archive scratchpad only on phase transitions or major milestones** (not after every task). Detailed history is preserved in story work logs.
+- When starting a new story, reset or update [scratchpad.md](mdc:scratchpad.md) to focus on the new work. Previous story details are in that story's work log.
 
-### Project Type Selection
-- Once you have sufficient MVP requirements, suggest a project type:
-  - Reference available types in `/bootstrapping/project-types/` (e.g., "programming," "research").
-  - Provide a rationale based on the requirements, e.g., *"Your need for a web app suggests the 'programming' type."*
-- If the user moves too much into architecture or implementation details:
-  - Record these non-requirements details in the "Non-Requirements Detail" section at the bottom of `/docs/requirements.md`
-  - Suggest choosing a project type to better address these technical items
-- List all project types with brief descriptions for the user to review.
-- Ask: *"Are you satisfied with the MVP requirements? Which project type would you like to proceed with?"*
-- Confirm the user's choice before transitioning.
-
-### Transition
-- When you have sufficient MVP requirements and the user confirms project type, run:
-  `./bootstrapping/scripts/transition_to_execute.sh [project_type]`
-
-### Guard Clause
-**MANDATORY**: You CANNOT proceed to the next phase without:
-1. A clear MVP definition
-2. The user explicitly confirming they're ready to move forward
-3. A confirmed project type selection
+Keep it concise (<300 lines): summarize or remove outdated info regularly to prevent overloading the context. Focus on the current session and immediate next steps.

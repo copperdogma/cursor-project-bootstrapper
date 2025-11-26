@@ -25,16 +25,23 @@
 - [ ] Present the top 3 repositories to the user with detailed analysis.
 - [ ] If unable to find 3 suitable repositories from the URLs in starter-repos.md, report specific difficulties and request permission for broader web searches.
 - [ ] Make a checklist in this document of what steps are needed to either a) pull and configure the chosen starter repo, or b) install and configure the chosen custom architecture.
-- [ ] Evaluate your checklist vs the `/docs/stories.md` document to ensure you're not doing project work in the setup phase. If you have extra detail that's misssing from `/docs/stories.md`, add it to the individual stories when appropriate.
-- [ ] If you pulled a starter repo, check its README file for a project overview and add the setup steps you find there to this checklist.
-- [ ] Configure development tools (e.g., ESLint, Prettier)  
-- [ ] Set up version control (e.g., git init)
+- [ ] Evaluate your checklist vs the `/docs/stories.md` document to ensure you're not doing project work in the setup phase. If you have extra detail that's missing from `/docs/stories.md`, add it to the individual stories when appropriate.
+- [ ] **Pull/clone the chosen starter repository into the project directory**
+- [ ] **Install all project dependencies (npm install, yarn install, etc.)**
+- [ ] **Set up required databases (PostgreSQL, etc.) and services (Redis, etc.)**
+- [ ] **Configure environment variables and secrets**
+- [ ] **Run initial database migrations or setup scripts**
+- [ ] **Test that the basic template application starts and runs without errors**
+- [ ] If you pulled a starter repo, check its README file for a project overview and add any missing setup steps to this checklist.
+- [ ] Configure development tools (e.g., ESLint, Prettier) if not already configured by template
+- [ ] Set up version control (e.g., git init) and make initial commits
 - [ ] Erase and rewrite the README.md file so it's perfect for this newly set up project
 - [ ] Document the new project structure in `/docs/design.md`
+- [ ] **Run `/rewrite-commands` to customize the AI commands for this specific project architecture and tooling**
 - [ ] Double check all steps are complete before moving on to the next phase
 
 **Transition to Next Phase**
-- Once all tasks are checked off, ask: "Are you ready to move to the Work phase?"
+- Once all tasks are checked off (including rewrite-commands), ask: "Are you ready to move to the Work phase?"
 - To move to the next phase, run `./bootstrapping/scripts/transition_to_execute.sh programming work`
 
 **User Input**  

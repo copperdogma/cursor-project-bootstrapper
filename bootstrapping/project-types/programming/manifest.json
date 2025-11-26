@@ -27,8 +27,6 @@
     {
       "name": "work",
       "files": [
-        {"source": "work/scratchpad.mdc", "destination": ".cursor/rules/scratchpad.mdc"},
-        {"source": "work/scratchpad.md", "destination": "scratchpad.md"},
         {"source": "work/project-management.mdc", "destination": ".cursor/rules/project-management.mdc"}
       ]
     }

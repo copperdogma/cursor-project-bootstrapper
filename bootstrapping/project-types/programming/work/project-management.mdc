@@ -8,15 +8,13 @@ alwaysApply: true
 ## Overview
 This file provides guidance for managing projects starting from the Building phase, after the project type is selected, and continuing into the Maintenance phase.
 
-This document is used to guide project planning, management, and execution
-[scratchpad.md](mdc:scratchpad.md) is used to track progress on the current task.
+This document is used to guide project planning, management, and execution.
 
 ---
 
 ## Phases
 - **Building**: Implement features and functionality through stories.
 - **Maintenance**: Manage updates, bug fixes, and improvements.
-- Update "Current Phase" in [scratchpad.md](mdc:scratchpad.md) when transitioning between phases.
 ---
 
 ## File Layout
@@ -28,8 +26,7 @@ This document is used to guide project planning, management, and execution
   - `/docs/stories/`: Contains individual story files.  
 - `/docs/templates/`:  
   - `story-template.md`: Template for new story files.  
-  - `stories-template.md`: Template for maintaining `/docs/stories.md`.  
-- [scratchpad.md](mdc:bootstrapping/project-types/programming/work/scratchpad.md): Tracks tasks, progress, decisions, and issues.
+  - `stories-template.md`: Template for maintaining `/docs/stories.md`.
 
 ---
 
@@ -40,14 +37,17 @@ This document is used to guide project planning, management, and execution
   - Create new stories in `/docs/stories/` using `/docs/templates/story-template.md`.  
   - Add each story to `/docs/stories.md` with a unique ID, title, status, and link.  
   - Update statuses in `/docs/stories.md` as work progresses (e.g., "In Progress," "Done").  
+  - Use the `build-story.md` command to work on stories - it maintains work logs within story files for complete implementation history.  
 - **Implementation**:  
   - Write code following `/docs/architecture.md`, `/docs/design.md`, and `@requirements.md`.  
 - **Progress Tracking**:  
-  - Log updates in `@scratchpad.md` under "Progress."  
+  - Log detailed implementation history in story work logs (see `build-story.md` command).  
+  - Check `docs/stories.md` to identify the current active story (status: "In Progress").  
+  - Review the active story's work log for current task, progress, and blockers.  
   - Reflect status changes in `/docs/stories.md`.  
 - **Completion**:  
   - Test the implementation (e.g., run code, verify functionality).  
-  - Update the story file with final notes.  
+  - Update the story file with final notes in the work log section.  
   - Mark the story as "Done" in `/docs/stories.md`.  
   - Confirm completion with the user and suggest the next story or phase transition.
 
@@ -60,7 +60,7 @@ This document is used to guide project planning, management, and execution
 ## Environment Management
 - Install necessary packages or tools during Building or Maintenance.  
 - Make a permanent record in `/docs/architecture.md`
-- Document changes in `@scratchpad.md` under "Decisions Made" or "Progress."
+- Document significant decisions in the active story's work log (see `build-story.md` command).
 
 ---
 
@@ -68,22 +68,21 @@ This document is used to guide project planning, management, and execution
 - For new requirements or updates:  
   - Revise `/docs/requirements.md`, `/docs/design.md`, and `/docs/architecture.md` as needed.  
   - Add new stories to `/docs/stories/` and `/docs/stories.md`.  
-  - Log decisions in `@scratchpad.md` under "Decisions Made."
+  - Log significant decisions in the relevant story's work log.
 
 ---
 
 ## User Interaction
 - Confirm story starts, completions, or phase changes with the user.  
-- Log user feedback or decisions in `@scratchpad.md`.
+- Log user feedback or significant decisions in the relevant story's work log.
 
 ---
 
-## Scratchpad Use
-- Start each interaction by checking `@scratchpad.md` for:  
-  - "Current Phase."  
-  - Active tasks or stories.  
+## Finding Current Work Context
+- Start each interaction by checking `docs/stories.md` to identify the active story (status: "In Progress").  
+- Review the active story file's work log for:  
+  - Current task and progress.  
+  - Recent actions and outcomes.  
   - Issues or blockers.  
-- Update it with:  
-  - Progress on stories.  
-  - Phase transitions.  
-  - Decisions or issues.
+  - Next steps.
+- All implementation history, decisions, and progress should be logged in story work logs (see `build-story.md` command).
